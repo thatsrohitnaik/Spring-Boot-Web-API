@@ -1,13 +1,12 @@
 package com.example.rest.model;
 
-import java.util.Objects;
-
 public class Table {
     String club = null;
     int played = 0;
     int won = 0;
     int lost = 0;
     int points = 0;
+    int draw = 0;
 
     public String getClub() {
         return club;
@@ -49,20 +48,11 @@ public class Table {
         this.points = points;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Table table = (Table) o;
-        return played == table.played &&
-                won == table.won &&
-                lost == table.lost &&
-                points == table.points &&
-                Objects.equals(club, table.club);
+    public int getDraw() {
+        return draw;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(club, played, won, lost, points);
+    public void setDraw(int draw) {
+        this.draw = draw;
     }
 }

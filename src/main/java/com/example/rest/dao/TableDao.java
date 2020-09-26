@@ -13,6 +13,7 @@ public class TableDao implements TableDaoInterface{
         table.setLost(1);
         table.setPlayed(2);
         table.setWon(1);
+        table.setDraw(0);
         table.setPoints(3);
         return table;
     }
